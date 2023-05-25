@@ -1,10 +1,11 @@
 import ReactRouterDOM from 'react';
+import { createContext } from 'react';
 
-const Route       = ReactRouterDOM.Route;
-const Link        = ReactRouterDOM.Link;
-const HashRouter  = ReactRouterDOM.HashRouter;
+export const Route       = ReactRouterDOM.Route;
+export const Link        = ReactRouterDOM.Link;
+export const HashRouter  = ReactRouterDOM.HashRouter;
 
-const UserContext = createContext(null);
+export const UserContext = createContext(null);
 
 function Card(props) {
     function classes(){
@@ -27,3 +28,4 @@ function Card(props) {
     )
 
  } 
+ export default Card;

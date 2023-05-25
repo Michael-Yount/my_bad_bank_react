@@ -1,4 +1,7 @@
 import HashRouter from './context.jsx';
+import NavBar from './navBar.jsx';
+import UserContext from './context.jsx';
+
 import './App.css';
 
   function Spa() {
@@ -6,22 +9,12 @@ import './App.css';
         
         <HashRouter>
             <NavBar/>
-                <UserContext.Provider value={{users:[{name:'Michael', email: 'michael@mit.edu', password:'secret', balance:100}]}}>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/CreateAccount/"  component={CreateAccount} />
-                    <Route path="/login/"  component={Login} />
-                    <Route path="/deposit/"  component={Deposit} />
-                    <Route path="/withdraw/"  component={Withdraw} />
-                    <Route path="/alldata/" component={AllData} />
+                <UserContext.Provider>
+                   
                 </UserContext.Provider>  
             </HashRouter>
         
     );
  }
-
- ReactDOM.render(
-    <Spa/>,
-    document.getElementById('root')
- )
 
 export default Spa;
