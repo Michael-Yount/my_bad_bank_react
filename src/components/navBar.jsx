@@ -14,16 +14,13 @@ function NavBar(){
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <ul className="navbar-nav">
         <li className="navbar-item">
-        <a className="nav-link active" aria-current="page" href="../pages/Login.jsx">Login</a>
-        </li>
-        <li className="navbar-item">
         <a className="nav-link active" aria-current="page" href="../pages/Deposit.jsx">Deposit</a>
         </li>
         <li className="navbar-item">
         <a className="nav-link active" aria-current="page" href="../pages/Withdraw.jsx">Withdraw</a>
         </li>
         <li className="navbar-item">
-        <a className="nav-link active" aria-current="page" href="../pages/Data.jsx">Data</a>
+        <a className="nav-link active" aria-current="page" href="../pages/AllData.jsx">Data</a>
         </li>
         <li className="navbar-item">
         <a className="nav-link active" aria-current="page" href="../pages/Home.jsx">Home</a>
