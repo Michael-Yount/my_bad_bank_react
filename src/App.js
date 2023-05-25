@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import HashRouter from './context.jsx';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  function Spa() {
+    return (
+        
+        <HashRouter>
+            <NavBar/>
+                <UserContext.Provider value={{users:[{name:'Michael', email: 'michael@mit.edu', password:'secret', balance:100}]}}>
+                    <Route path="/" exact component={Home} />
+                    <Route path="/CreateAccount/"  component={CreateAccount} />
+                    <Route path="/login/"  component={Login} />
+                    <Route path="/deposit/"  component={Deposit} />
+                    <Route path="/withdraw/"  component={Withdraw} />
+                    <Route path="/alldata/" component={AllData} />
+                </UserContext.Provider>  
+            </HashRouter>
+        
+    );
+ }
 
-export default App;
+ ReactDOM.render(
+    <Spa/>,
+    document.getElementById('root')
+ )
+
+export default Spa;
