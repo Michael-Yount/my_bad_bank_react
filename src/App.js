@@ -1,20 +1,21 @@
-import HashRouter from './context.jsx';
-import NavBar from './navBar.jsx';
-import UserContext from './context.jsx';
+import { Outlet } from 'react-router-dom';
+import NavBar from './components/navBar.jsx';
+import { BankProvider } from './utilities/Bankcontext.jsx';
+
 
 import './App.css';
 
-  function Spa() {
+  function App() {
+
     return (
-        
-        <HashRouter>
+      <BankProvider>
+
+        <div className='container'>
             <NavBar/>
-                <UserContext.Provider>
-                   
-                </UserContext.Provider>  
-            </HashRouter>
-        
+            <Outlet/>  
+         </div>
+      </BankProvider>
     );
  }
 
-export default Spa;
+export default App;

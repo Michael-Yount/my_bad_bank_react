@@ -1,7 +1,7 @@
 body {
     
   background: rgba(16, 14, 14, 0.851);
-  background: linear-gradient(75deg, rgba(54, 31, 31, 0.918) 1%, rgba(206, 171, 163, 0.914) 75%, rgb(195, 184, 162) 100%);
+  background: linear-gradient(75deg, rgba(54, 31, 31, 0.918) 1%, rgba(147, 134, 98, 0.914) 75%, rgb(195, 184, 162) 100%);
 }
 .brand {
   padding: 10px;
