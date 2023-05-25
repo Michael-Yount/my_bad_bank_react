@@ -4,8 +4,8 @@ function NavBar(){
     <div className="container-fluid">
     <nav className="navbar navbar-expand-xl navbar-dark ">
       
-    <div className="brand"><img src="./img/badBank.png" alt="Bad Bank"/></div>
-    <a className="navbar-brand" href="./home.jsx">
+    <div className="brand"><img src="../img/badBank.ico" alt=""/></div>
+    <a className="navbar-brand" href="../pages/Home.jsx">
       My <span className="bad">Bad</span> Bank</a>
       
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,19 +15,19 @@ function NavBar(){
       <ul className="navbar-nav">
         
         <li className="navbar-item">
-        <a className="nav-link active" aria-current="page" href="#/CreateAccount/">Create Account</a>
+        <a className="nav-link active" aria-current="page" href="../pages/Register.jsx">Create Account</a>
         </li>
         <li className="navbar-item">
-        <a className="nav-link active" aria-current="page" href="#/login/">Login</a>
+        <a className="nav-link active" aria-current="page" href="../pages/Login.jsx">Login</a>
         </li>
         <li className="navbar-item">
-        <a className="nav-link active" aria-current="page" href="#/deposit/">Deposit</a>
+        <a className="nav-link active" aria-current="page" href="../pages/Deposit.jsx">Deposit</a>
         </li>
         <li className="navbar-item">
-        <a className="nav-link active" aria-current="page" href="#/withdraw/">Withdraw</a>
+        <a className="nav-link active" aria-current="page" href="../pages/Register.jsx">Withdraw</a>
         </li>
         <li className="navbar-item">
-        <a className="nav-link active" aria-current="page" href="#/balance/">Balance</a>
+        <a className="nav-link active" aria-current="page" href="../pages/Data.jsx">Balance</a>
         </li>
         <li className="navbar-item">
         <a className="nav-link active" aria-current="page" href="#/alldata/">All Data</a>
