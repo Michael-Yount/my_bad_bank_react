@@ -1,7 +1,7 @@
 body {
     
   background: rgba(16, 14, 14, 0.851);
-  background: linear-gradient(75deg, rgba(54, 31, 31, 0.918) 1%, rgba(147, 134, 98, 0.914) 75%, rgb(195, 184, 162) 100%);
+  background: linear-gradient(75deg, rgba(54, 31, 31, 0.918) 1%, rgba(137, 104, 15, 0.914) 85%, rgba(55, 12, 130, 0.868) 100%);
 }
 .brand {
   padding: 10px;
@@ -19,6 +19,9 @@ body {
 }
 .navbar-link {
   color: aliceblue;
+}
+.card {
+  opacity: 100%;
 }
 .card-header {
   color: black;
