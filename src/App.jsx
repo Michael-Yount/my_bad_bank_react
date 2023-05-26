@@ -1,9 +1,9 @@
-import NavBar from './components/navBar.jsx';
-import { Route, Routes, BrowserRouter} from 'react-router-dom';
-import { BankProvider } from './utilities/Bankcontext.jsx';
+import { Route, Routes, BrowserRouter as Router} from 'react-router-dom';
+import { BankContext } from './utilities/Bankcontext.jsx';
 
 import './App.css';
 
+import NavBar from './components/navBar.jsx';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Deposit from './pages/Deposit';
@@ -16,16 +16,18 @@ import Withdraw from './pages/Withdraw';
      <> 
 
   <div className='container'>
-  <BrowserRouter>
+
+  <Router>
+  <BankContext.Provider/>
     <NavBar/>
       <Routes>
-           <Route path="./pages/Home.jsx" element={<Home/>} />
+           <Route exact path="./pages/Home.jsx" element={<Home/>} />
            <Route path="./pages/Deposit.jsx"  element={<Deposit />} />
            <Route path="./pages/AllData.jsx" element={<Data />} />
            <Route path="./pages/Login.jsx" element={<Login />} />
            <Route path="./pages/Withdraw.jsx" element={<Withdraw />} />
        </Routes>  
-    </BrowserRouter>
+    </Router>
             <Login />
          </div>
          </>
