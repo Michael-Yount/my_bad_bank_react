@@ -8,13 +8,14 @@ function Home() {
 
   return (
     <div className="container">
-      <h1>Welcome to BadBank</h1>
+      <h1>My <span style={{color: 'red'}}>Bad</span> Bank</h1>
       {ctx.loggedInUser ? (
-        <p>You're logged in as <b className="capitalize">{ctx.loggedInUser}</b>.</p>
+        <p>Logged in user: <b className="capitalize">{ctx.loggedInUser}</b>.</p>
       ) : (
         <Login/>
       )}
-      <p className="text-danger">Your data is not secure, but it's fun to play around with! lol</p>
+      <p className="text-danger">In all of our SIX months in business. We almost have never lost anyones money or accidentally given it away. <br/>
+      So please feel free to leave some of your money and take someone elses.</p>
     </div>
   )
 }

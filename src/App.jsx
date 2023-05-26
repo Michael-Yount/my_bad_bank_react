@@ -1,5 +1,5 @@
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Routes,
   Route
 } from 'react-router-dom';
@@ -21,8 +21,8 @@ function App() {
     ]
   };
   return (
-    <Router>
-        <NavBar/>
+    <BrowserRouter>
+      <NavBar/>
         <div className="container mt-3">
           <BankContext.Provider value={defaultContext}>
             <Routes>
@@ -34,7 +34,7 @@ function App() {
             </Routes>
           </BankContext.Provider>
         </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
