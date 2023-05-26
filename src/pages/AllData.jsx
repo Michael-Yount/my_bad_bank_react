@@ -1,13 +1,45 @@
-import { useBankContext } from "../utilities/Bankcontext";
+import React from 'react';
+import { useContext } from 'react';
+import { BankContext } from '../utilities/Bankcontext';
 
-const Data = () => {
-    const { bank } = useBankContext();
+function AllData() {
+  const ctx = useContext(BankContext);
+  const loggedInUser = ctx.loggedInUser;
 
-    return (
-        <div>
-            {JSON.stringify(bank, null, 2)}
-        </div>
-    )
-};
+  const printRows = () => {
+    const users = ctx.users;
+    const userTable = users.map(user => {
+      return (
+        <tr>
+          <td>{user.username}</td>
+          <td>{user.email}</td>
+          <td>{user.password}</td>
+          <td>{user.balance}</td>
+        </tr>
+      )
+    })
+    return userTable;
+  }
 
-export default Data;
+  return (
+    <div className="card mb-3">
+      <div className="card-header">Bank Data</div>
+      <div className="card-body">
+        <table className="table">
+          <thead>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Balance</th>
+          </thead>
+          <tbody>
+            {printRows()}
+          </tbody>
+        </table>
+        {loggedInUser && <p><b className="capitalize">{loggedInUser}</b> is logged in.</p>}
+      </div>
+    </div>
+  )
+}
+
+export default AllData;

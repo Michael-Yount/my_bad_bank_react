@@ -1,18 +1,22 @@
-import Card from 'react-bootstrap/Card';
+import React from 'react';
+import { useContext } from 'react';
+import Login from './Login';
+import { BankContext } from '../utilities/Bankcontext';
 
 function Home() {
+  const ctx = useContext(BankContext);
 
-    return (
-      <Card
-        bgcolor="grey"
-        textcolor="black"
-        header="BadBank Landing Page"
-        title="Welcome to the Bank"
-        text="You can use this bank at your own risk"
-        body={(<img src="./img/badBank.png" className="img-fluid"
-        alt=''/>)}
-      />
-    );
+  return (
+    <div className="container">
+      <h1>Welcome to BadBank</h1>
+      {ctx.loggedInUser ? (
+        <p>You're logged in as <b className="capitalize">{ctx.loggedInUser}</b>.</p>
+      ) : (
+        <Login/>
+      )}
+      <p className="text-danger">Your data is not secure, but it's fun to play around with! lol</p>
+    </div>
+  )
 }
 
 export default Home;
