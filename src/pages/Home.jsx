@@ -15,7 +15,7 @@ function Home() {
         <Login/>
       )}
       <p className="text-danger">In all of our SIX months in business. We almost have never lost anyones money or accidentally given it away. <br/>
-      So please feel free to leave some of your money and take someone elses.</p>
+      So please feel free to leave some of your money and take someone elses</p>
     </div>
   )
 }
