@@ -21,12 +21,13 @@ root.render(
            <Route index element={<Home/>} />
            <Route path="deposit"  element={<Deposit />} />
            <Route path="data" element={<Data />} />
+           <Route path="login" element={<Login />} />
            <Route path="withdraw" element={<Withdraw />} />
         </Route>  
        </Routes>  
     </BrowserRouter>
   </React.StrictMode>,  
 );
-
 */
+
 

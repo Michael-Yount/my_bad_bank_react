@@ -1,24 +1,38 @@
-/*import { Outlet } from 'react-router-dom';
 import NavBar from './components/navBar.jsx';
+import { Route, Routes, BrowserRouter} from 'react-router-dom';
 import { BankProvider } from './utilities/Bankcontext.jsx';
 
-
 import './App.css';
+
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Deposit from './pages/Deposit';
+import Data from './pages/AllData';
+import Withdraw from './pages/Withdraw';
 
   function App() {
 
     return (
-      <BankProvider>
+     <> 
 
-        <div className='container'>
-            <NavBar/>
-            <Outlet/>  
+  <div className='container'>
+  <BrowserRouter>
+    <NavBar/>
+      <Routes>
+           <Route path="./pages/Home.jsx" element={<Home/>} />
+           <Route path="./pages/Deposit.jsx"  element={<Deposit />} />
+           <Route path="./pages/AllData.jsx" element={<Data />} />
+           <Route path="./pages/Login.jsx" element={<Login />} />
+           <Route path="./pages/Withdraw.jsx" element={<Withdraw />} />
+       </Routes>  
+    </BrowserRouter>
+            <Login />
          </div>
-      </BankProvider>
+         </>
     );
  }
-*/
-import { Route, HashRouter } from 'react-router-dom';
+
+/*import { Route, HashRouter } from 'react-router-dom';
 import NavBar from './components/navBar';
 import Home from './pages/Home';
 import CreateAccount from './pages/CreateAccount';
@@ -51,8 +65,8 @@ function App() {
         ],
       }}
   >
-     <HashRouter>
             <NavBar/>
+     <HashRouter>
                     <Route path="/" exact component={Home} />
                     <Route path="/createaccount/"  component={CreateAccount} />
                     <Route path="/deposit/"  component={Deposit} />
@@ -63,5 +77,6 @@ function App() {
   
   );
 }
+*/
 
 export default App;

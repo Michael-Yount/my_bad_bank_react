@@ -13,6 +13,9 @@ function NavBar(){
     </button>
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <ul className="navbar-nav">
+      <li className="navbar-item">
+        <a className="nav-link active" aria-current="page" href="../pages/Login.jsx">Login</a>
+        </li>
         <li className="navbar-item">
         <a className="nav-link active" aria-current="page" href="../pages/Deposit.jsx">Deposit</a>
         </li>
