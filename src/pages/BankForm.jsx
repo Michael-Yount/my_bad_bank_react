@@ -31,7 +31,7 @@ function BankForm({formName, hideEmail}){
         return;
       }
       if (userExists.password !== password) {
-        setErrorMessage('Invalid password. Please check and try again.');
+        setErrorMessage('Please enter correct password.');
         return;
       }
       ctx.loggedInUser = username;   
@@ -53,7 +53,7 @@ function BankForm({formName, hideEmail}){
         return;
       }
       if (password.length < 8) {
-        setErrorMessage('Please set a stronger password.');
+        setErrorMessage('Password must be more than 8 characters.');
         setSuccessMessage('');
         return;
       }

@@ -1,7 +1,7 @@
 body {
     
   background: rgba(16, 14, 14, 0.851);
-  background: linear-gradient(75deg, rgba(54, 31, 31, 0.918) 1%, rgba(137, 104, 15, 0.914) 85%, rgba(55, 12, 130, 0.868) 100%);
+  background: linear-gradient(75deg, rgba(246, 113, 5, 0.332) 1%, rgba(3, 22, 233, 0.252) 85%, rgba(8, 45, 235, 0.304) 100%);
 }
 .brand {
   padding: 10px;
@@ -21,7 +21,8 @@ body {
   color: aliceblue;
 }
 .card {
-  opacity: 100%;
+  opacity: 10
+  0%;
 }
 .card-header {
   color: black;

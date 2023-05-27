@@ -28,7 +28,7 @@ function App() {
             <Routes>
               <Route path="/" exact          element={<Home/>} />
               <Route path="/create-account/" element={<CreateAccount/>} />
-              <Route path="/deposit/"        element={<Deposit/>} />
+              <Route path="./pages/Deposit.jsx"        element={<Deposit/>} />
               <Route path="/withdraw/"       element={<Withdraw/>} />
               <Route path="/all-data/"       element={<AllData/>} />
             </Routes>

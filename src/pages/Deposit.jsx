@@ -1,7 +1,7 @@
 import React           from 'react';
 import { useContext }  from 'react'
 import { BankContext } from '../utilities/Bankcontext';
-import BankForm        from './BankForm.jsx';
+import BankForm        from './BankForm';
 
 function Deposit() {
   const ctx = useContext(BankContext);
