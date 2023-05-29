@@ -1,5 +1,5 @@
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route
 } from 'react-router-dom';
@@ -9,32 +9,33 @@ import CreateAccount from "./pages/CreateAccount";
 import Deposit from "./pages/Deposit";
 import Withdraw from "./pages/Withdraw";
 import AllData from "./pages/AllData";
-import { BankContext } from './utilities/Bankcontext';
+import { createContext } from 'react';
+
+export const UserContext = createContext(null)
 
 function App() {
-  const defaultContext = {
-    loggedInUser: null,
+  return (
+    <UserContext.Provider value={{ 
+
     users: [
       {
         username: 'michael', email: 'michael@mail.edu', password: 'secretMIT', balance: 100
-      }
-    ]
-  };
-  return (
-    <BrowserRouter>
+      },
+    ],
+  
+    }}
+    >
+    <HashRouter>
       <NavBar/>
-        <div className="container mt-3">
-          <BankContext.Provider value={defaultContext}>
             <Routes>
-              <Route path="/" exact          element={<Home/>} />
-              <Route path="/create-account/" element={<CreateAccount/>} />
-              <Route path="./pages/Deposit.jsx"        element={<Deposit/>} />
-              <Route path="/withdraw/"       element={<Withdraw/>} />
-              <Route path="/all-data/"       element={<AllData/>} />
+              <Route path="/" exact          element={<Home />} />
+              <Route path="/create-account" element={<CreateAccount />} />
+              <Route path="/Deposit"        element={<Deposit />} />
+              <Route path="/Withdraw"       element={<Withdraw />} />
+              <Route path="/AllData"       element={<AllData />} />
             </Routes>
-          </BankContext.Provider>
-        </div>
-    </BrowserRouter>
+    </HashRouter>
+          </UserContext.Provider>
   );
 }
 

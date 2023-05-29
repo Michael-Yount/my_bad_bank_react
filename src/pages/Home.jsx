@@ -1,10 +1,10 @@
 import React from 'react';
 import { useContext } from 'react';
 import Login from './Login';
-import { BankContext } from '../utilities/Bankcontext';
+import { UserContext } from '../App';
 
 function Home() {
-  const ctx = useContext(BankContext);
+  const ctx = useContext(UserContext);
 
   return (
     <div className="container">

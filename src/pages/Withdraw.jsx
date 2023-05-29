@@ -1,10 +1,10 @@
 import React           from 'react';
 import { useContext }  from 'react';
-import { BankContext } from '../utilities/Bankcontext';
 import BankForm        from './BankForm.jsx';
+import { UserContext } from '../App';
 
 function Withdraw() {
-  const ctx = useContext(BankContext);
+  const ctx = useContext(UserContext);
   const loggedInUser = ctx.loggedInUser;
 
   return (

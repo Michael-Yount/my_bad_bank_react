@@ -1,9 +1,9 @@
 import React        from 'react';
 import { useState, useContext } from 'react';
-import { BankContext } from '../utilities/Bankcontext';
+import { UserContext } from '../App';
 
 function BankForm({formName, hideEmail}){
-  const ctx = useContext(BankContext);
+  const ctx = useContext(UserContext);
 
   const [errorMessage, setErrorMessage] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
