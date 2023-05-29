@@ -43,7 +43,8 @@ body {
 }
 
 a:link {
-  color: rgb(229, 116, 17);
+  color: rgb(233, 131, 42);
+  padding: 10px;
 }
 a:hover {
   color: #000;

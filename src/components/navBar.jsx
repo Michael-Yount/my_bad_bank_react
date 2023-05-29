@@ -14,8 +14,10 @@ function NavBar(){
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <ul className="navbar-nav">
         <li className="navbar-item">
-         
             <a className="nav-link active " aria-current="page"  href="#/Login">Login</a>
+        </li>
+        <li className="navbar-item">
+            <a className="nav-link active " aria-current="page"  href="#/CreateAccount">Create Account</a>
         </li>
         <li className="navbar-item">
         <a className="nav-link active" aria-current="page" href="#/Deposit">Deposit</a>
@@ -24,7 +26,7 @@ function NavBar(){
         <a className="nav-link active" aria-current="page" href="#/Withdraw">Withdraw</a>
         </li>
         <li className="navbar-item">
-        <a className="nav-link active" aria-current="page" href="#/AllData">Data</a>
+        <a className="nav-link active" aria-current="page" href="#/AllData">Customer Data</a>
         </li>
         <li className="navbar-item">
         <a className="nav-link active" aria-current="page" href="#/Home">Home</a>

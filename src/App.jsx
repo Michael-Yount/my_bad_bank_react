@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 import NavBar from "./components/navBar";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
 import CreateAccount from "./pages/CreateAccount";
 import Deposit from "./pages/Deposit";
 import Withdraw from "./pages/Withdraw";
@@ -28,11 +29,12 @@ function App() {
     <HashRouter>
       <NavBar/>
             <Routes>
-              <Route path="/" exact          element={<Home />} />
-              <Route path="/create-account" element={<CreateAccount />} />
+              <Route path="/Home" exact          element={<Home />} />
+              <Route path="/CreateAccount" element={<CreateAccount />} />
               <Route path="/Deposit"        element={<Deposit />} />
               <Route path="/Withdraw"       element={<Withdraw />} />
               <Route path="/AllData"       element={<AllData />} />
+              <Route path="/Login"       element={<Login />} />
             </Routes>
     </HashRouter>
           </UserContext.Provider>
