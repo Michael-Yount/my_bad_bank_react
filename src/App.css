@@ -3,10 +3,16 @@ body {
   background: rgba(16, 14, 14, 0.851);
   background: linear-gradient(75deg, rgba(246, 113, 5, 0.332) 1%, rgba(3, 22, 233, 0.252) 85%, rgba(8, 45, 235, 0.304) 100%);
 }
+.container {
+  max-width: 30rem;
+  padding-top:2rem;
+}
 .brand {
   padding: 10px;
 }
-
+.list {
+  background-color: aliceblue;
+}
 
 .navbar {
   background-color: rgb(54, 74, 74);

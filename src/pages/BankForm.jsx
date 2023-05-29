@@ -1,6 +1,7 @@
 import React        from 'react';
 import { useState, useContext } from 'react';
 import { UserContext } from '../App';
+import { Container } from 'react-bootstrap';
 
 function BankForm({formName, hideEmail}){
   const ctx = useContext(UserContext);
@@ -108,7 +109,9 @@ function BankForm({formName, hideEmail}){
     else
     {
       return (
-        <>
+        <Container className='container'>
+
+
           <div className="form-group">
             Name<br/>
             <input type="input" className="form-control" id="name"
@@ -126,7 +129,8 @@ function BankForm({formName, hideEmail}){
             placeholder="Password" value={password} onChange={e => setPassword(e.currentTarget.value)} /><br/>
           </div>
           <button type="submit" className="btn btn-light" onClick={handleFormSubmit}>{formName}</button>
-        </>
+        </Container>
+      
       )
     }
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useContext } from 'react';
 import { UserContext } from '../App';
+import { Container } from 'react-bootstrap';
 
 function AllData() {
   const ctx = useContext(UserContext);
@@ -22,8 +23,10 @@ function AllData() {
   }
 
   return (
+    <Container className='container'>
+
     <div className="card mb-3">
-      <div className="card-header">Bank Data</div>
+      <h2 className="card-header">Customer Data</h2>
       <div className="card-body">
         <table className="table">
           <thead>
@@ -39,6 +42,7 @@ function AllData() {
         {loggedInUser && <p><b className="capitalize">{loggedInUser}</b> is logged in.</p>}
       </div>
     </div>
+    </Container>
   )
 }
 

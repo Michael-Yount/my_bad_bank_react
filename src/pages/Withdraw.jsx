@@ -8,8 +8,9 @@ function Withdraw() {
   const loggedInUser = ctx.loggedInUser;
 
   return (
-    <div className="card mb-3">
-      <div className="card-header">Withdraw</div>
+    <div className="container">
+
+      <h2 className="card-header">Withdraw</h2>
       <div className="card-body">
         <BankForm
           formName="Withdraw"

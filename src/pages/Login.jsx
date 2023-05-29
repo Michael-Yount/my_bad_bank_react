@@ -5,8 +5,9 @@ function Login() {
   
 
   return (
-    <div className="card mb-3">
-      <div className="card-header">Login</div>
+    <div className='container'>
+
+      <h2 className="card-header">Login</h2>
       <div className="card-body">
         <BankForm 
           hideEmail={true}
