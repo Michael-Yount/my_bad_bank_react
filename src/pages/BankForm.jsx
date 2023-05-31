@@ -36,7 +36,7 @@ function BankForm({formName, hideEmail}){
         return;
       }
       ctx.loggedInUser = username;   
-      setSuccessMessage('Logged in as ' + username);
+      setSuccessMessage('You are logged in ' + username);
     }
     if (formName === "Create Account") {
       // Handle Create Account Form
