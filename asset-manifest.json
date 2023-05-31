@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/my_bad_bank_react/static/css/main.43405fca.css",
+    "main.js": "/my_bad_bank_react/static/js/main.9b2cf9ee.js",
+    "index.html": "/my_bad_bank_react/index.html",
+    "main.43405fca.css.map": "/my_bad_bank_react/static/css/main.43405fca.css.map",
+    "main.9b2cf9ee.js.map": "/my_bad_bank_react/static/js/main.9b2cf9ee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.43405fca.css",
+    "static/js/main.9b2cf9ee.js"
+  ]
+}
