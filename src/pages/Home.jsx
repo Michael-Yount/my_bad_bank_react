@@ -8,7 +8,7 @@ function Home() {
 
   return (
     <div className="container">
-      <h1>My <span style={{color: 'red'}}>Bad</span> Bank</h1>
+      <h1 className='header'>My <span style={{color: 'red'}}>Bad</span> Bank</h1>
       {ctx.loggedInUser ? (
         <p>Logged in user: <b className="capitalize">{ctx.loggedInUser}</b>.</p>
       ) : (

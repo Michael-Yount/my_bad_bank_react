@@ -1,6 +1,8 @@
+
+
 function NavBar(){
     return (
-        <>
+        <div className="container">
     <div className="container-fluid">
     <nav className="navbar navbar-expand-xl navbar-dark ">
       
@@ -37,7 +39,7 @@ function NavBar(){
 </nav>
     </div>
            
-        </>
+        </div>
     );
 }
 

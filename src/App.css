@@ -1,10 +1,8 @@
 body {
-    
-  background: rgba(16, 14, 14, 0.851);
-  background: linear-gradient(75deg, rgba(246, 113, 5, 0.332) 1%, rgba(3, 22, 233, 0.252) 85%, rgba(8, 45, 235, 0.304) 100%);
+  background: rgba(255, 255, 255, 0.851);
 }
 .container {
-  max-width: 30rem;
+  max-width: 50rem;
   padding-top:2rem;
 }
 .brand {
@@ -15,8 +13,9 @@ body {
 }
 
 .navbar {
-  background-color: rgb(54, 74, 74);
-  color: aliceblue;
+  max-width: 50rem;
+  background-color: rgb(120, 128, 128);
+  color: rgb(249, 224, 224);
   border-radius: 10px;
   padding: 10px;
   margin-top: 10px;
@@ -24,14 +23,19 @@ body {
   
 }
 .navbar-link {
-  color: aliceblue;
+  color: rgb(250, 253, 255);
 }
 .card {
-  opacity: 10
-  0%;
+  text-align: center;
+  opacity: 10;
+
 }
 .card-header {
+  text-align: center;
   color: black;
+}
+.header {
+  text-align: center;
 }
 
 .card-text {
@@ -56,5 +60,5 @@ a:hover {
   color: #000;
 }
 a:active {
-  color: rgb(0, 255, 162);
+  color: rgb(0, 255, 55);
 }
