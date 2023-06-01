@@ -1,3 +1,5 @@
+import Tooltip from 'react-tooltip';
+
 function NavBar(){
     return (
         <>
@@ -14,10 +16,11 @@ function NavBar(){
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <ul className="navbar-nav">
         <li className="navbar-item">
-            <a className="nav-link active " aria-current="page"  href="#/Login">Login</a>
+            <a className="nav-link active " aria-current="page"  href="#/Login" data-bs-toggle="tooltip" data-bs-title="Another one here too">Login</a>
         </li>
         <li className="navbar-item">
-            <a className="nav-link active " aria-current="page"  href="#/CreateAccount">Create Account</a>
+            <a className="nav-link active " aria-current="page"  href="#/CreateAccount" data-for="tool" data-tip="At your own risk!">Create Account</a>
+            <Tooltip place="bottom" type="info" id="tool"/>
         </li>
         <li className="navbar-item">
         <a className="nav-link active" aria-current="page" href="#/Deposit">Deposit</a>
@@ -42,3 +45,8 @@ function NavBar(){
 }
 
 export default NavBar;
+
+/*
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+*/ 
