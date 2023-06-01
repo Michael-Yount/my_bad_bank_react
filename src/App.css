@@ -1,37 +1,49 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-    
-  background: rgba(16, 14, 14, 0.851);
-  background: linear-gradient(75deg, rgba(246, 113, 5, 0.332) 1%, rgba(3, 22, 233, 0.252) 85%, rgba(8, 45, 235, 0.304) 100%);
+  background: rgba(255, 255, 255, 0.29);
 }
 .container {
-  max-width: 30rem;
+  max-width: 60rem;
   padding-top:2rem;
 }
 .brand {
-  padding: 10px;
+  padding-right: 10px;
+}
+.navbar-brand {
+  margin-right: 3rem;
+  font-size: 1.5rem;
 }
 .list {
   background-color: aliceblue;
 }
 
 .navbar {
-  background-color: rgb(54, 74, 74);
-  color: aliceblue;
+  max-width: 80rem;
+  background-color: rgb(65, 82, 82);
+  color: rgb(249, 224, 224);
   border-radius: 10px;
   padding: 10px;
   margin-top: 10px;
   box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.417);
   
 }
-.navbar-link {
-  color: aliceblue;
-}
+
 .card {
-  opacity: 10
-  0%;
+  text-align: center;
+  opacity: 10;
+
 }
 .card-header {
+  text-align: center;
   color: black;
+}
+.header {
+  text-align: center;
 }
 
 .card-text {
@@ -48,13 +60,25 @@ body {
   border-radius: 10px;
 }
 
-a:link {
-  color: rgb(233, 131, 42);
+.nav-link {
   padding: 10px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  
+  
+  &:hover {
+    color: rgb(75, 0, 42);
+  }
+  &:active {
+    color: rgb(0, 255, 55);
+  }
+  &:focus {
+    color: rgb(0, 0, 0);
+    background-color: rgb(201, 240, 142);
+    border-radius: 1rem;
+    box-shadow: .2em .2em .2em rgba(0, 0, 0, 0.443);
+  }
+    
 }
-a:hover {
-  color: #000;
-}
-a:active {
-  color: rgb(0, 255, 162);
-}
+
+
