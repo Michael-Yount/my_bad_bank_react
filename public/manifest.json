@@ -8,12 +8,12 @@
         "type": "image/x-icon"
       },
       {
-        "src": "./badBank.ico",
+        "src": "../badbank.jpg",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "./badBank.png",
+        "src": "../badBank.png",
         "type": "image/png",
         "sizes": "512x512"
       }
