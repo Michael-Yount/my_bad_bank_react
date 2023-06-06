@@ -44,7 +44,7 @@ function BankForm({formName, hideEmail}){
         setErrorMessage('This user has already been registered. Please log in.');
       }
       if (!username) {
-        setErrorMessage('Please set a username.');
+        setErrorMessage('You must enter a user name.');
         setSuccessMessage('');
         return;
       }
@@ -74,7 +74,7 @@ function BankForm({formName, hideEmail}){
           if (currentUser.balance >= Number(amount)) {
             currentUser.balance = Number(prevBalance) - Number(amount);
           } else {
-            setErrorMessage('Transaction failed.');
+            setErrorMessage(`Transaction failed, you can't withdraw more than your account balance.`);
           }
         }
         setAmount('0');
@@ -93,7 +93,7 @@ function BankForm({formName, hideEmail}){
         return (
           <>
             <div className="form-group">
-              <p className="mt-3 text-success">Account Balance: ${currentUser.balance}</p>
+              <p className="mt-3 text-success"data-testid="username">Account Balance: ${currentUser.balance}</p>
               Amount<br/>
               <input type="number" className="form-control" id="amount"
               value={amount} min="0" max={currentUser.balance} onChange={e => setAmount(e.currentTarget.value)} /><br/>
