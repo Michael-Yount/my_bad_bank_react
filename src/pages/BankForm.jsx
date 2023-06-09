@@ -137,7 +137,7 @@ function BankForm({formName, hideEmail}){
             <input type="password" className="form-control input" id="password"
             placeholder="Password" value={password} onChange={ e => setPassword(e.currentTarget.value)} /><br/>
           </div>
-          <button type="submit" className="btn btn-light" onClick={handleFormSubmit} disabled={true}>{formName}</button>
+          <button type="submit" className="btn btn-light" onClick={handleFormSubmit} disabled={false}>{formName}</button>
         </Container>
       
       )
