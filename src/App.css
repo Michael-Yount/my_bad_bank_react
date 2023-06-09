@@ -12,7 +12,7 @@ body {
   margin-top: 1rem ;
   text-align: left;
   font-size: 1.2rem;
-  background-color: rgba(203, 232, 233, 0.573);
+  background-color: rgba(171, 235, 237, 0.573);
   padding: 2rem;
   border-radius: 10px;
 
@@ -44,6 +44,7 @@ body {
 }
 
 .navbar {
+  
   width: 60rem;
   background-color: rgb(65, 82, 82);
   color: rgb(249, 224, 224);
@@ -64,7 +65,8 @@ body {
   color: black;
 }
 .header {
-  text-align: left;  
+  text-align: left;
+  padding: 1rem;  
 }
 
 .card-text {

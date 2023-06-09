@@ -8,6 +8,7 @@ function Home() {
 
   return (
     < div className="container">
+      <image src={'require(../../public/badbank.jpg)'}></image>
       <p className="welcome"><span className='welcome-word'>Welcome</span> to My Bad Bank, where your money is our money. No secrets, No security, thats our motto.</p>
       <h1 className='header'>My <span style={{color: 'red'}}>Bad</span> Bank</h1>
       {ctx.loggedInUser ? (

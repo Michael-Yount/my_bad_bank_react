@@ -12,7 +12,7 @@ function BankForm({formName, hideEmail}){
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [amount, setAmount] = useState('');
-  const [enabled, setEnabled] = useState(false);
+  const [disabled, setDisabled] = useState(false);
 
   const clearForm = () => {
     setUsername('');
@@ -22,6 +22,8 @@ function BankForm({formName, hideEmail}){
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
+
+      
 
     setErrorMessage('');
     const userExists = ctx.users.find(user => user.username === username);
@@ -87,7 +89,7 @@ function BankForm({formName, hideEmail}){
     }
   }
 
-  const renderFormFields = () => {
+  const renderFormInputs = () => {
     if (formName === "Deposit" || formName === "Withdraw") {
       if (ctx.loggedInUser) {
         const currentUser = ctx.users.find(user => user.username === ctx.loggedInUser);
@@ -99,7 +101,7 @@ function BankForm({formName, hideEmail}){
               <input type="number" className="form-control" id="amount"
               value={amount} min="0" max={currentUser.balance} onChange={e => setAmount(e.currentTarget.value)} /><br/>
             </div>
-            <button type="submit" className="btn btn-light" onClick={handleFormSubmit} disabled={true}></button>
+            <button type="submit" className="btn btn-light" onClick={handleFormSubmit}disabled={false}>Deposit</button>
           </>
         )
       }
@@ -109,26 +111,33 @@ function BankForm({formName, hideEmail}){
     }
     else
     {
+
+      const emailChange = (e) => {
+        setEmail(e.currentTarget.value);
+        setDisabled(false);
+      }
+
+
       return (
         <Container className='container'>
 
           <div className="form-group">
             Name<br/>
             <input type="input" className="form-control input" id="name"
-            placeholder="Username" value={username} onChange={e => setUsername(e.currentTarget.value)} /><br/>
+            placeholder="Username" value={username} onChange={ e => setUsername(e.currentTarget.value)} /><br/>
           </div>
           {!hideEmail && (
             <div className="form-group">
               Email<br/><input type="input" className="form-control input" id="email"
-              placeholder="Email" value={email} onChange={e => setEmail(e.currentTarget.value)} /><br/>
+              placeholder="Email" value={email} onChange={emailChange} /><br/>
             </div>
           )}
           <div className="form-group">
             Password<br/>
             <input type="password" className="form-control input" id="password"
-            placeholder="Password" value={password} onChange={e => setPassword(e.currentTarget.value)} /><br/>
+            placeholder="Password" value={password} onChange={ e => setPassword(e.currentTarget.value)} /><br/>
           </div>
-          <button type="submit" className="btn btn-light" onClick={handleFormSubmit} disabled>{formName}</button>
+          <button type="submit" className="btn btn-light" onClick={handleFormSubmit} disabled={true}>{formName}</button>
         </Container>
       
       )
@@ -138,9 +147,9 @@ function BankForm({formName, hideEmail}){
   return (
     <>
       <form>
-        {renderFormFields()}
+        {renderFormInputs()}
       </form>
-      {errorMessage && <div className="alert alert-danger mt-3 modal" role="alert">{errorMessage}</div>}
+      {errorMessage && <div className="alert alert-danger mt-3" role="alert">{errorMessage}</div>}
       {successMessage && <div className="alert alert-success mt-3" role="alert">{successMessage}</div>}
     </>
   )  
