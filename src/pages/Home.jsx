@@ -13,6 +13,7 @@ function Home() {
       {ctx.loggedInUser ? (
         <p>Logged in user: <b className="capitalize">{ctx.loggedInUser}</b>.</p>
       ) : (
+        
         <BankForm
           formName="Login"
         />

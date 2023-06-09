@@ -6,8 +6,8 @@ import TooltipFunc from "./tooltip";
 
 function NavBar(){
     return (
-        <Container className="container">
-    <div className="container-fluid">
+        <Container className="container-fluid">
+    <div className="container">
     <nav className="navbar navbar-expand-xl navbar-dark ">
     <image src='../badbank.png'></image>
       

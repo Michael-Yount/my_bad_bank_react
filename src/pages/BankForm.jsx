@@ -112,7 +112,6 @@ function BankForm({formName, hideEmail}){
       return (
         <Container className='container'>
 
-
           <div className="form-group">
             Name<br/>
             <input type="input" className="form-control input" id="name"

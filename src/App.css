@@ -8,6 +8,7 @@ body {
   background: rgba(242, 235, 227, 0.821);
 }
 .welcome {
+  width: fit-content;
   margin-top: 1rem ;
   text-align: left;
   font-size: 1.2rem;
@@ -33,10 +34,9 @@ body {
 .logo {
   background-image: url(./greenArrow.jpg);
 
-  width: max-content;
 }
 .navbar-brand {
-  margin-right: 3rem;
+  margin-right: 5rem;
   font-size: 1.5rem;
 }
 .list {
@@ -44,7 +44,7 @@ body {
 }
 
 .navbar {
-  width: auto;
+  width: 60rem;
   background-color: rgb(65, 82, 82);
   color: rgb(249, 224, 224);
   border-radius: 10px;
@@ -55,9 +55,8 @@ body {
 }
 
 .card {
-  text-align: right;
+  text-align: left;
   opacity: 10;
-
 
 }
 .card-header {
