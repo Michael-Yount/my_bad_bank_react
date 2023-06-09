@@ -12,6 +12,7 @@ function BankForm({formName, hideEmail}){
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [amount, setAmount] = useState('');
+  const [enabled, setEnabled] = useState(false);
 
   const clearForm = () => {
     setUsername('');
@@ -28,11 +29,11 @@ function BankForm({formName, hideEmail}){
     if (formName === "Login") {
       // Handle Login Form
       if (!userExists) {
-        setErrorMessage('This username is invalid.');
+        setErrorMessage('This is not a user.');
         return;
       }
       if (userExists.password !== password) {
-        setErrorMessage('Please enter correct password.');
+        setErrorMessage('Please enter a correct password.');
         return;
       }
       ctx.loggedInUser = username;   
@@ -61,7 +62,7 @@ function BankForm({formName, hideEmail}){
       ctx.users.push({ "username": username, "email": email, "password": password, "balance": 100 });
       ctx.loggedInUser = username;
       clearForm();
-      setSuccessMessage('Your account has been created.');
+      setSuccessMessage('You are logged in' + username);
     }
     if (formName === "Deposit" || formName === "Withdraw") {
       // Handle Deposit / Withdraw
@@ -80,7 +81,7 @@ function BankForm({formName, hideEmail}){
         setAmount('0');
       }
       else {
-        setErrorMessage('Please set an amount.');
+        setErrorMessage('Please enter an amount first.');
         return;
       }
     }
@@ -93,12 +94,12 @@ function BankForm({formName, hideEmail}){
         return (
           <>
             <div className="form-group">
-              <p className="mt-3 text-success"data-testid="username">Account Balance: ${currentUser.balance}</p>
+              <p className="mt-3 text-success user"data-testid="username">Account Balance: ${currentUser.balance}</p>
               Amount<br/>
               <input type="number" className="form-control" id="amount"
               value={amount} min="0" max={currentUser.balance} onChange={e => setAmount(e.currentTarget.value)} /><br/>
             </div>
-            <button type="submit" className="btn btn-light" onClick={handleFormSubmit}>{formName}</button>
+            <button type="submit" className="btn btn-light" onClick={handleFormSubmit} disabled={true}></button>
           </>
         )
       }
@@ -114,21 +115,21 @@ function BankForm({formName, hideEmail}){
 
           <div className="form-group">
             Name<br/>
-            <input type="input" className="form-control" id="name"
+            <input type="input" className="form-control input" id="name"
             placeholder="Username" value={username} onChange={e => setUsername(e.currentTarget.value)} /><br/>
           </div>
           {!hideEmail && (
             <div className="form-group">
-              Email<br/><input type="input" className="form-control" id="email"
+              Email<br/><input type="input" className="form-control input" id="email"
               placeholder="Email" value={email} onChange={e => setEmail(e.currentTarget.value)} /><br/>
             </div>
           )}
           <div className="form-group">
             Password<br/>
-            <input type="password" className="form-control" id="password"
+            <input type="password" className="form-control input" id="password"
             placeholder="Password" value={password} onChange={e => setPassword(e.currentTarget.value)} /><br/>
           </div>
-          <button type="submit" className="btn btn-light" onClick={handleFormSubmit}>{formName}</button>
+          <button type="submit" className="btn btn-light" onClick={handleFormSubmit} disabled>{formName}</button>
         </Container>
       
       )
@@ -140,7 +141,7 @@ function BankForm({formName, hideEmail}){
       <form>
         {renderFormFields()}
       </form>
-      {errorMessage && <div className="alert alert-danger mt-3" role="alert">{errorMessage}</div>}
+      {errorMessage && <div className="alert alert-danger mt-3 modal" role="alert">{errorMessage}</div>}
       {successMessage && <div className="alert alert-success mt-3" role="alert">{successMessage}</div>}
     </>
   )  

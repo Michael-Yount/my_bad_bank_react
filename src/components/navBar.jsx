@@ -1,15 +1,17 @@
+import { Container } from "react-bootstrap";
 import TooltipFunc from "./tooltip";
+ 
 
 
 
 function NavBar(){
     return (
-        <div className="container">
+        <Container className="container">
     <div className="container-fluid">
     <nav className="navbar navbar-expand-xl navbar-dark ">
+    <image src='../badbank.png'></image>
       
     <a className="navbar-brand" href="#/Home">
-    <img src="/src/badbank.jpg" alt="bb" width="30" height="30"></img>
       My <span className="bad">Bad</span> Bank</a>
       
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +24,7 @@ function NavBar(){
 </nav>
     </div>
            
-        </div>
+        </Container>
     );
 }
 

@@ -9,6 +9,7 @@ function Login() {
 
       <h2 className="card-header">Login</h2>
       <div className="card-body">
+        
         <BankForm 
           hideEmail={true}
           formName="Login"

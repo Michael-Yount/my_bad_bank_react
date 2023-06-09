@@ -9,7 +9,7 @@ function TooltipFunc() {
   );
 
   return (
-    <div className='justify-content-end'>
+    <div className=''>
     <ul className="navbar-nav">
         <li className="navbar-item" >
           <Link id="login" title="So surprised that you came back...">
@@ -17,27 +17,27 @@ function TooltipFunc() {
         </Link>{' '}
         </li>    
         <li className="navbar-item">
-            <Link id="create-account" title="Don't say, I didn't warn you...">
+            <Link id="create-account" title="Create an account, but do not expect it to be secure.">
             <a className="nav-link " aria-current="page"  href="#/CreateAccount">Create Account</a>
             </Link>{' '}
         </li>
         <li className="navbar-item">
-            <Link id="deposit" title="You may never see your money again!">
+            <Link id="deposit" title="Deposit here and you may never see your money again!">
         <a className="nav-link" aria-current="page" href="#/Deposit">Deposit</a>
              </Link>{' '}
         </li>
         <li className="navbar-item">
-        <Link id="withdraw" title="Take it all out, while you still can.">
+        <Link id="withdraw" title="Withdraw your money here and take it all out, while you still can.">
         <a className="nav-link" aria-current="page" href="#/Withdraw">Withdraw</a>
         </Link>{' '}
         </li>
         <li className="navbar-item">
-        <Link id="customer-data" title="This is where customers info is kept.Don't hack this...">
+        <Link id="customer-data" title="This is where all account info is kept.">
         <a className="nav-link" aria-current="page" href="#/AllData">Customer Data</a>
         </Link>{' '}
         </li>
         <li className="navbar-item">
-            <Link id="home" title="Yes, please go home, your money is no good here...">
+            <Link id="home" title="This will take you to the home page.">
         <a className="nav-link" aria-current="page" href="#/Home">Home</a>
         </Link>{' '}
         </li>
