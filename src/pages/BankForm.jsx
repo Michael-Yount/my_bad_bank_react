@@ -101,7 +101,7 @@ function BankForm({formName, hideEmail}){
               <input type="number" className="form-control" id="amount"
               value={amount} min="0" max={currentUser.balance} onChange={e => setAmount(e.currentTarget.value)} /><br/>
             </div>
-            <button type="submit" className="btn btn-light" onClick={handleFormSubmit}disabled={false}>Deposit</button>
+            <button type="submit" className="btn btn-light" onClick={handleFormSubmit}disabled={false}>{formName}</button>
           </>
         )
       }

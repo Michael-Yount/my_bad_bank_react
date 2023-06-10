@@ -20,7 +20,7 @@ function App() {
 
     users: [
       {
-        username: 'michael', email: 'michael@mail.edu', password: 'secretMIT', balance: 100
+        username: 'Ash the Dog', email: 'woof@paws.com', password: 'hiddenbones', balance: 100
       },
     ],
   
