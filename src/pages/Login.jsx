@@ -1,11 +1,13 @@
 import React           from 'react';
 import BankForm        from './BankForm';
+import { Card, Container } from 'react-bootstrap';
 
 function Login() {
   
 
   return (
-    <div className='container'>
+    <Container className='container'>
+    <Card>
 
       <h2 className="card-header">Login</h2>
       <div className="card-body">
@@ -15,7 +17,8 @@ function Login() {
           formName="Login"
         />
       </div>
-    </div>
+    </Card>
+    </Container>
   )
 }
 

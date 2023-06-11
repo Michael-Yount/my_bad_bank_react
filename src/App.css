@@ -47,14 +47,17 @@ body {
   background-color: rgb(65, 82, 82);
   color: rgb(249, 224, 224);
   border-radius: 10px;
-  padding: 10px;
-  margin-top: 10px;
+  padding: 1.3rem;
+  margin-top: 3rem;
   box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.417);
 }
 
 .card {
   text-align: left;
-  opacity: 10;
+  width:fit-content;
+  background: rgb(210,182,228);
+background: linear-gradient(165deg, rgb(228, 182, 182) 0%, rgba(253,29,29,0.0032387955182072714) 50%, rgb(166, 161, 153) 100%);
+
 
 }
 .card-header {

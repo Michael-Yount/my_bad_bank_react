@@ -2,7 +2,7 @@ import React           from 'react';
 import { useContext }  from 'react'
 import BankForm        from './BankForm';
 import { UserContext } from '../App';
-import { Container } from 'react-bootstrap';
+import { Card,Container } from 'react-bootstrap';
 
 function Deposit() {
   const ctx = useContext(UserContext);
@@ -10,13 +10,14 @@ function Deposit() {
   
   return (
     <Container className='container'>
-
+      <Card className="card">
       <h2 className="card-header">Deposit</h2>
       <div className="card-body">
         <BankForm
           formName="Deposit"
         />
       </div>
+      </Card>
     </Container>
   )
 }
