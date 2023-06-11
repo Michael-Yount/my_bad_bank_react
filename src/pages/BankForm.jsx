@@ -12,7 +12,7 @@ function BankForm({formName, hideEmail}){
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [amount, setAmount] = useState('');
-  const [disabled, setDisabled] = useState(false);
+  const [dataDisabled, setDataDisabled] = useState(false);
 
   const clearForm = () => {
     setUsername('');
@@ -114,7 +114,17 @@ function BankForm({formName, hideEmail}){
 
       const emailChange = (e) => {
         setEmail(e.currentTarget.value);
-        setDisabled(false);
+        setDataDisabled(e.currentTarget.value);
+      }
+
+      const passwordChange = (e) => {
+        setPassword(e.currentTarget.value);
+        setDataDisabled(e.currentTarget.value);
+      }
+
+      const userNameChange = (e) => {
+        setUsername(e.currentTarget.value);
+        setDataDisabled(e.currentTarget.value);
       }
 
 
@@ -124,7 +134,7 @@ function BankForm({formName, hideEmail}){
           <div className="form-group">
             Name<br/>
             <input type="input" className="form-control input" id="name"
-            placeholder="Username" value={username} onChange={ e => setUsername(e.currentTarget.value)} /><br/>
+            placeholder="Username" value={username} onChange={userNameChange} /><br/>
           </div>
           {!hideEmail && (
             <div className="form-group">
@@ -135,9 +145,9 @@ function BankForm({formName, hideEmail}){
           <div className="form-group">
             Password<br/>
             <input type="password" className="form-control input" id="password"
-            placeholder="Password" value={password} onChange={ e => setPassword(e.currentTarget.value)} /><br/>
+            placeholder="Password" value={password} onChange={passwordChange} /><br/>
           </div>
-          <button type="submit" className="btn btn-light" onClick={handleFormSubmit} disabled={false}>{formName}</button>
+          <button type="submit" className="btn btn-light" onClick={handleFormSubmit} disabled={!dataDisabled}>{formName}</button>
         </Container>
       
       )
