@@ -1,7 +1,7 @@
 import React        from 'react';
 import { useState, useContext } from 'react';
 import { UserContext } from '../App';
-import { Container } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 
 function BankForm({formName, hideEmail}){
   const ctx = useContext(UserContext);
@@ -101,7 +101,7 @@ function BankForm({formName, hideEmail}){
               <input type="number" className="form-control" id="amount"
               value={amount} min="0" max={currentUser.balance} onChange={e => setAmount(e.currentTarget.value)} /><br/>
             </div>
-            <button type="submit" className="btn btn-light" onClick={handleFormSubmit}disabled={false}>{formName}</button>
+            <Button type="submit" className="btn outline-success btn-lg" onClick={handleFormSubmit}disabled={false}>{formName}</Button>
           </>
         )
       }
@@ -147,7 +147,7 @@ function BankForm({formName, hideEmail}){
             <input type="password" className="form-control input" id="password"
             placeholder="Password" value={password} onChange={passwordChange} /><br/>
           </div>
-          <button type="submit" className="btn btn-light" onClick={handleFormSubmit} disabled={!dataDisabled}>{formName}</button>
+          <Button type="submit" className="btn btn-outline-success" onClick={handleFormSubmit} disabled={!dataDisabled}>{formName}</Button>
         </Container>
       
       )

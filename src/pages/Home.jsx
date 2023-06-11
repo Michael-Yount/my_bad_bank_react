@@ -9,8 +9,8 @@ function Home() {
 
   return (
     <Container className="container">
-      <p className="welcome"><span className='welcome-word'>Welcome</span> to My Bad Bank, where your money is our money. No secrets, No security, thats our motto.</p>
       <h1 className='header'>My <span style={{color: 'red'}}>Bad</span> Bank</h1>
+      <p className="welcome"><span className='welcome-word'>Welcome</span> to My Bad Bank, where your money is our money. No secrets, No security, thats our motto.</p>
       {ctx.loggedInUser ? (
         <p>Logged in user: <b className="capitalize">{ctx.loggedInUser}</b>.</p>
         ) : (
@@ -19,6 +19,8 @@ function Home() {
           formName="Login"
           />
         </Card>
+        
+        
           )}
     </Container>
   )
