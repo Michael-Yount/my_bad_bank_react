@@ -87,11 +87,26 @@ function BankForm({formName, hideEmail}){
         return;
       }
     }
+    if (formName === "Home") {
+      return (
+        <>
+          <Button type="submit" className="btn outline-success" onClick={handleFormSubmit}disabled={!dataDisabled}>{formName}</Button>
+        </>
+      ) 
+      
+    }
   }
 
   const renderFormInputs = () => {
     if (formName === "Deposit" || formName === "Withdraw") {
       if (ctx.loggedInUser) {
+
+        const balanceChange = (e) => {
+          setAmount(e.currentTarget.value);
+          setDataDisabled(e.currentTarget.value);
+        }
+  
+
         const currentUser = ctx.users.find(user => user.username === ctx.loggedInUser);
         return (
           <>
@@ -99,9 +114,9 @@ function BankForm({formName, hideEmail}){
               <p className="mt-3 text-success user"data-testid="username">Account Balance: ${currentUser.balance}</p>
               Amount<br/>
               <input type="number" className="form-control" id="amount"
-              value={amount} min="0" max={currentUser.balance} onChange={e => setAmount(e.currentTarget.value)} /><br/>
+              value={amount} min="0" max={currentUser.balance} onChange={balanceChange} /><br/>
             </div>
-            <Button type="submit" className="btn outline-success btn-lg" onClick={handleFormSubmit}disabled={false}>{formName}</Button>
+            <Button type="submit" className="btn outline-success" onClick={handleFormSubmit}disabled={!dataDisabled}>{formName}</Button>
           </>
         )
       }

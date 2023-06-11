@@ -22,6 +22,9 @@ body {
   color: rgb(255, 72, 0)
   ;
 }
+.homePageLogo {
+  width: 10rem;
+}
 
 .container {
   max-width: 80rem;
@@ -58,8 +61,6 @@ body {
   background: rgb(210,182,228);
   background: linear-gradient(165deg, rgb(228, 182, 182) 0%, rgba(253,29,29,0.0032387955182072714) 50%, rgb(166, 161, 153) 100%);
   padding-bottom: 1.6rem;
-
-
 }
 .card-header {
   text-align: left;
