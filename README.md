@@ -6,7 +6,7 @@
 
 ## A WIP
 ## here it is ported to github pages. https://michael-yount.github.io/my_bad_bank_react/
-
+![BadBAnkThumbnail](https://github.com/Michael-Yount/my_bad_bank_react/assets/11709807/3d4bacb8-5b5b-4919-8c63-f4b81df2fd34)
 ### Future roadmap and development.
 ##### add tooltips for navbar links. Completed.
 ##### add link color change for active link in use. Completed.
@@ -15,3 +15,4 @@
 
 
 ![mybadbank](https://github.com/Michael-Yount/my_bad_bank_react/assets/11709807/09547619-650e-468f-a531-e63fcac997d8)
+
