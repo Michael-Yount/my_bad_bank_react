@@ -24,11 +24,10 @@ function CreateAccount() {
                       formName="Create Account"
                     />
                   </div>
-      <img src={pic} className='homePageLogo'alt='logo'></img>
+                <img src={pic} className='homePageLogo'alt='logo'></img>
               </Card>
-        </div>
+          </div>
       </div>
-
     </Container>
   )
 }

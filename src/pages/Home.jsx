@@ -9,26 +9,29 @@ function Home() {
 
   return (
     <Container className="container">
-          <h1 className='header'>My <span style={{color: 'red'}}>Bad</span> Bank</h1>
-      <Row>
         <div className='row'>
           <div className='col'>
-              <p className="welcome"><span className='welcome-word'>Welcome</span> to My Bad Bank. <br /> The bank where your money is our money. <br /> No secrets, No security, thats our motto.</p>
-              </div>
+              <p className="welcome"><span className='welcome-word'>Welcome</span> to My Bad Bank. 
+              <br /> The bank where your money is our money. 
+              <br /> No secrets, No security, thats our motto.
+              </p>
+          </div>
             <div className='col'>
             {ctx.loggedInUser ? (
-            <p>Logged in user: <b className="capitalize">{ctx.loggedInUser}</b>.</p>
-             ) : (
-                  <Card className='card'>
+              <p>Logged in user: <b className="capitalize">{ctx.loggedInUser}</b>.</p>
+              ) : (
+                <Card className='card'>
+                      <div className='card-header'>
+                        <h1 className='header'>My <span style={{color: 'red'}}>Bad</span> Bank</h1>
+                      </div>
                       <BankForm
-                      formName="Home"
+                      formName="login"
                       />
-                    <img src={pic} className='homePageLogo'alt='logo'></img>
-                  </Card>
-        )}
+                  <img src={pic} className='homePageLogo'alt='logo'></img>
+                </Card>
+              )}
+          </div>
         </div>
-        </div>
-      </Row>
     </Container>
   )
 }

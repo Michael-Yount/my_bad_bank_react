@@ -24,24 +24,34 @@ function AllData() {
 
   return (
     <Container className='container'>
-
-    <div className="card mb-3">
-      <h2 className="card-header">Customer Data</h2>
-      <div className="card-body">
-        <table className="table">
-          <thead>
-            <th>Username</th>
-            <th>Email</th>
-            <th>Password</th>
-            <th>Balance</th>
-          </thead>
-          <tbody>
-            {printRows()}
-          </tbody>
-        </table>
-        {loggedInUser && <p><b className="capitalize">{loggedInUser}</b> is logged in.</p>}
+      <div className='row'>
+        <div className='col'>
+          <p className='welcome'><span className='welcome-word'>Welcome</span> create your My Bad Bank login account here. Enjoy futuristing banking practices. 
+              <br/> <span className='highlighted-text-welcome'></span> 
+              <br/> <span className='highlighted-text-welcome'></span> 
+              <br/> <span className='highlighted-text-welcome'></span> 
+          </p>
+        </div>
+        <div className='col'>
+          <div className="card mb-3">
+              <h2 className="card-header">Customer Data</h2>
+              <div className="card-body">
+                <table className="table">
+                  <thead>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Balance</th>
+                  </thead>
+                    <tbody>
+                      {printRows()}
+                    </tbody>
+                </table>
+                  {loggedInUser && <p><b className="capitalize">{loggedInUser}</b> is logged in.</p>}
+              </div>
+          </div>
+         </div> 
       </div>
-    </div>
     </Container>
   )
 }

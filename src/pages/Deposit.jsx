@@ -3,6 +3,7 @@ import { useContext }  from 'react'
 import BankForm        from './BankForm';
 import { UserContext } from '../App';
 import { Card,Container, Row } from 'react-bootstrap';
+import pic from '../badbank.png';
 
 function Deposit() {
   const ctx = useContext(UserContext);
@@ -16,12 +17,13 @@ function Deposit() {
           </div>
           <div className='col'>
               <Card className="card">
-              <h2 className="card-header">Deposit</h2>
-              <div className="card-body">
-                <BankForm
-                  formName="Deposit"
-                />
-              </div>
+                <h2 className="card-header">Deposit</h2>
+                  <div className="card-body">
+                    <BankForm
+                      formName="Deposit"
+                    />
+                  </div>
+                <img src={pic} className='homePageLogo'alt='logo'></img>
               </Card>
           </div>
         </div>
