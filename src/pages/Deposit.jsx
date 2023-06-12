@@ -17,7 +17,7 @@ function Deposit() {
           <br/>futuristing banking practices.
           <br/>Log in to continue. 
 
-              <br/> <span className='highlighted-text-welcome'></span> 
+              <br/> <span className='highlighted-text-welcome'>{loggedInUser}</span> 
               <br/> <span className='highlighted-text-welcome'></span> 
               <br/> <span className='highlighted-text-welcome'></span> 
           </p>

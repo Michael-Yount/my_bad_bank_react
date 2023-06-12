@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { UserContext } from '../App';
-import { Card, Container, Row } from 'react-bootstrap';
+import { Card, Container} from 'react-bootstrap';
 import pic from '../badbank.png'
 
 function Home() {
