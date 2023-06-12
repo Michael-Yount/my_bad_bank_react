@@ -9,7 +9,7 @@ function CreateAccount() {
     <Container className="container">
       <div className='row'>
         <div className='col'>
-          <p className='welcome'><span className='welcome-word'>Welcome</span> create your My Bad Bank login account here. Enjoy futuristing banking practices. 
+          <p className='welcome'><span className='welcome-word'>Welcome</span> create your My Bad Bank login account here. Enjoy futuristic banking practices. 
               <br/> <span className='highlighted-text-welcome'></span> 
               <br/> <span className='highlighted-text-welcome'></span> 
               <br/> <span className='highlighted-text-welcome'></span> 
