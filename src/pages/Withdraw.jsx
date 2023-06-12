@@ -15,7 +15,7 @@ function Withdraw() {
         <div className='col'>
           <p className='welcome'><span className='welcome-word'>When</span> you are logged in you can enjoy 
           <br/>futuristing banking practices. 
-              <br/> <span className='highlighted-text-welcome'></span> 
+              <br/> <span className='highlighted-text-welcome'>{loggedInUser}</span> 
               <br/> <span className='highlighted-text-welcome'></span> 
               <br/> <span className='highlighted-text-welcome'></span> 
           </p>
