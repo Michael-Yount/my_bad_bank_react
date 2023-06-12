@@ -6,8 +6,7 @@ import logo from '../badbank.png';
 
 function NavBar(){
     return (
-     <Container>
-      <nav className="navbar navbar-expand-xl navbar-dark ">
+      <nav className="navbar navbar-expand-lg navbar-dark ">
        <div className="container-fluid">
           <a className="navbar-brand" href="#/Home">
               <img src={logo} alt="logo" className="logo"></img>
@@ -21,7 +20,6 @@ function NavBar(){
           </div>
         </div> 
       </nav>
-    </Container>
     );
 }
 

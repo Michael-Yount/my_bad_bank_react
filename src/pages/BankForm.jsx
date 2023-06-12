@@ -28,6 +28,14 @@ function BankForm({formName, hideEmail}){
     setErrorMessage('');
     const userExists = ctx.users.find(user => user.username === username);
     const userEmailExists = ctx.users.find(user => user.email === email);
+    
+    if (formName === "Home") {
+      return (
+        <>
+        New banking Practices to change the industry
+        </>
+      )
+    }
     if (formName === "Login") {
       // Handle Login Form
       if (!userExists) {
@@ -99,6 +107,7 @@ function BankForm({formName, hideEmail}){
       
     }*/
   }
+
 
   const renderFormInputs = () => {
     if (formName === "Deposit" || formName === "Withdraw") {

@@ -14,6 +14,9 @@ function Home() {
               <p className="welcome"><span className='welcome-word'>Welcome</span> to My Bad Bank. 
               <br /> The bank where your money is our money. 
               <br /> No secrets, No security, thats our motto.
+              <br /> Create an account and start Bad Banking right away.
+              <br /> Check other accounts to see what they are up too as well.
+
               </p>
           </div>
             <div className='col'>
@@ -24,9 +27,7 @@ function Home() {
                       <div className='card-header'>
                         <h1 className='header'>My <span style={{color: 'red'}}>Bad</span> Bank</h1>
                       </div>
-                      <BankForm
-                      formName="login"
-                      />
+                      
                   <img src={pic} className='homePageLogo'alt='logo'></img>
                 </Card>
               )}
