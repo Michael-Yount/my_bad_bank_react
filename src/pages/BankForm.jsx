@@ -28,7 +28,7 @@ function BankForm({formName, hideEmail}){
     setErrorMessage('');
     const userExists = ctx.users.find(user => user.username === username);
     const userEmailExists = ctx.users.find(user => user.email === email);
-    
+
     if (formName === "Home") {
       return (
         <>
@@ -91,7 +91,7 @@ function BankForm({formName, hideEmail}){
             setErrorMessage(`Transaction failed, you can't withdraw more than your account balance.`);
           }
         }
-        setAmount('0');
+        setAmount('');
       }
       else {
         setErrorMessage('Please enter an amount first.');
@@ -129,7 +129,7 @@ function BankForm({formName, hideEmail}){
               <input type="number" className="form-control" id="amount"
               value={amount} min="0" max={currentUser.balance} onChange={balanceChange} /><br/>
             </div>
-            <Button type="submit" className="btn outline-success" onClick={handleFormSubmit}disabled={!dataDisabled}>{formName}</Button>
+            <Button type="submit" className="btn btn-outline-success" onClick={handleFormSubmit}disabled={!dataDisabled}>{formName}</Button>
           </Container>
         )
       }
@@ -187,7 +187,7 @@ function BankForm({formName, hideEmail}){
       <form>
         {renderFormInputs()}
       </form>
-      {errorMessage && <div className="alert alert-danger mt-3" role="alert">{errorMessage}</div>}
+      {errorMessage && <div className="alert alert-danger" role="alert">{errorMessage}</div>}
       {successMessage && <div className="alert alert-success mt-3" role="alert">{successMessage}</div>}
     </>
   )  
