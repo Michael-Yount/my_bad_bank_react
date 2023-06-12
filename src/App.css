@@ -23,8 +23,7 @@ body {
   color: rgb(255, 72, 0)
   ;
 }
-.homePageLogo {
-}
+
 .highlighted-text {
   font-size: 1.5rem;
   color: rgb(14, 116, 0);
@@ -54,9 +53,7 @@ margin: 1rem;
   margin-top: 1rem;
   box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.417);
 }
-.nav-container {
 
-}
 
 .card {
   align-items: center;
