@@ -48,7 +48,9 @@ body {
 }
 
 .navbar {
-  margin: 5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+
   background-color: rgb(28, 51, 51);
   color: rgb(249, 224, 224);
   border-radius: 10px;
