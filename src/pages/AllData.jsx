@@ -26,7 +26,8 @@ function AllData() {
     <Container className='container'>
       <div className='row'>
         <div className='col'>
-          <p className='welcome'><span className='welcome-word'>Welcome</span> create your My Bad Bank login account here. Enjoy futuristing banking practices. 
+          <p className='welcome'><span className='welcome-word'>We</span> showcase your information here.
+          <br/> Enjoy futuristing banking practices. 
               <br/> <span className='highlighted-text-welcome'></span> 
               <br/> <span className='highlighted-text-welcome'></span> 
               <br/> <span className='highlighted-text-welcome'></span> 

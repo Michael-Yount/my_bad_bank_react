@@ -122,5 +122,8 @@ body {
 .userData {
   font-size: 2rem;
 }
+.table {
+  width: fit-content;
+}
 
 

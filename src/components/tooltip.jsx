@@ -9,7 +9,8 @@ function TooltipFunc() {
   );
 
   return (
-    <div className=''>
+  <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+
     <ul className="navbar-nav">
         <li className="navbar-item" >
           <Link id="login" title="So surprised that you came back...">
@@ -43,7 +44,7 @@ function TooltipFunc() {
         </li>
        
       </ul>
-      </div>
+  </div>    
   )
 }
 

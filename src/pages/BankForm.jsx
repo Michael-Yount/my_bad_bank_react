@@ -55,6 +55,8 @@ function BankForm({formName, hideEmail}){
         setErrorMessage('Please enter your email address.');
         setSuccessMessage('');
         return;
+      } else if (/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)) {
+        setErrorMessage('this must be a valid email');
       }
       if (password.length < 8) {
         setErrorMessage('Password must be more than 8 characters.');

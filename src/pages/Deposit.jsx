@@ -13,7 +13,12 @@ function Deposit() {
     <Container className='container'>
         <div className='row'>
           <div className='col'>
-            <p className='welcome'> <h2>When you are logged in here</h2> <br/> your information displays on the Customer Data page</p>
+          <p className='welcome'><span className='welcome-word'>When</span> you are logged in you can enjoy 
+          <br/>futuristing banking practices. 
+              <br/> <span className='highlighted-text-welcome'></span> 
+              <br/> <span className='highlighted-text-welcome'></span> 
+              <br/> <span className='highlighted-text-welcome'></span> 
+          </p>
           </div>
           <div className='col'>
               <Card className="card">
