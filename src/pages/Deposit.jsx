@@ -14,7 +14,9 @@ function Deposit() {
         <div className='row'>
           <div className='col'>
           <p className='welcome'><span className='welcome-word'>When</span> you are logged in you can enjoy 
-          <br/>futuristing banking practices. 
+          <br/>futuristing banking practices.
+          <br/>Log in to continue. 
+
               <br/> <span className='highlighted-text-welcome'></span> 
               <br/> <span className='highlighted-text-welcome'></span> 
               <br/> <span className='highlighted-text-welcome'></span> 
