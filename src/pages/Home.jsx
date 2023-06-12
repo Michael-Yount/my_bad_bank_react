@@ -8,33 +8,28 @@ function Home() {
   const ctx = useContext(UserContext);
 
   return (
-    <Row >
     <Container className="container">
-  <div class="row">
-      <h1 className='header'>My <span style={{color: 'red'}}>Bad</span> Bank</h1>
-          <div class="col">
-        1 of 2
-      <p className="welcome"><span className='welcome-word'>Welcome</span> to My Bad Bank, where your money is our money. No secrets, No security, thats our motto.</p>
-      {ctx.loggedInUser ? (
-        <p>Logged in user: <b className="capitalize">{ctx.loggedInUser}</b>.</p>
-        ) : (
-          <Card className='card'>
-          <BankForm
-          formName="Home"
-          />
-        </Card>
-        
-        
+          <h1 className='header'>My <span style={{color: 'red'}}>Bad</span> Bank</h1>
+      <Row>
+        <div className='row'>
+          <div className='col'>
+              <p className="welcome"><span className='welcome-word'>Welcome</span> to My Bad Bank. <br /> The bank where your money is our money. <br /> No secrets, No security, thats our motto.</p>
+              </div>
+            <div className='col'>
+            {ctx.loggedInUser ? (
+            <p>Logged in user: <b className="capitalize">{ctx.loggedInUser}</b>.</p>
+             ) : (
+                  <Card className='card'>
+                      <BankForm
+                      formName="Home"
+                      />
+                    <img src={pic} className='homePageLogo'alt='logo'></img>
+                  </Card>
         )}
         </div>
-    <div class="col">
-      2 of 2
-        <img src={pic} className='homePageLogo'alt='logo'></img>
-    </div>
-  </div>
+        </div>
+      </Row>
     </Container>
-    
-    </Row>
   )
 }
 

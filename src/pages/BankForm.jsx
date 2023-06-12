@@ -14,7 +14,7 @@ function BankForm({formName, hideEmail}){
   const [amount, setAmount] = useState('');
   const [dataDisabled, setDataDisabled] = useState(false);
 
-  const clearForm = () => {
+  const clearFields = () => {
     setUsername('');
     setEmail('');
     setPassword('');
@@ -63,10 +63,11 @@ function BankForm({formName, hideEmail}){
       }
       ctx.users.push({ "username": username, "email": email, "password": password, "balance": 100 });
       ctx.loggedInUser = username;
-      clearForm();
+      clearFields();
       setSuccessMessage('You are logged in' + username);
     }
     if (formName === "Deposit" || formName === "Withdraw") {
+
       // Handle Deposit / Withdraw
       if(amount) {
         const currentUser = ctx.users.find(user => user.username === ctx.loggedInUser);
@@ -87,14 +88,14 @@ function BankForm({formName, hideEmail}){
         return;
       }
     }
-    if (formName === "Home") {
+  /*  if (formName === "Home") {
       return (
         <>
           <Button type="submit" className="btn outline-success" onClick={handleFormSubmit}disabled={!dataDisabled}>{formName}</Button>
         </>
       ) 
       
-    }
+    }*/
   }
 
   const renderFormInputs = () => {
@@ -109,7 +110,8 @@ function BankForm({formName, hideEmail}){
 
         const currentUser = ctx.users.find(user => user.username === ctx.loggedInUser);
         return (
-          <>
+
+          <Container className='container'>
             <div className="form-group">
               <p className="mt-3 text-success user"data-testid="username">Account Balance: ${currentUser.balance}</p>
               Amount<br/>
@@ -117,7 +119,7 @@ function BankForm({formName, hideEmail}){
               value={amount} min="0" max={currentUser.balance} onChange={balanceChange} /><br/>
             </div>
             <Button type="submit" className="btn outline-success" onClick={handleFormSubmit}disabled={!dataDisabled}>{formName}</Button>
-          </>
+          </Container>
         )
       }
       else {
