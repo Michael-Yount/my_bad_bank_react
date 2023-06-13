@@ -22,6 +22,9 @@ function App() {
       {
         username: 'Ash the Dog', email: 'woof@paws.com', password: 'hiddenbones', balance: 100
       },
+      {
+        username: 'Bubbles the clown', email: 'shoes@honk.com', password: 'squeekytoy', balance: 100
+      }
     ],
   
     }}
