@@ -44,5 +44,17 @@
     "gh-pages": "^5.0.0",
     "jest": "^27.5.1",
     "react-router-dom": "^6.11.2"
-  }
+  },
+  "description": "![BadBAnkThumbnail](https://github.com/Michael-Yount/my_bad_bank_react/assets/11709807/3d4bacb8-5b5b-4919-8c63-f4b81df2fd34)\r ### Future roadmap and development.\r ##### add tooltips for navbar links. Completed.\r ##### add link color change for active link in use. Completed.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Michael-Yount/my_bad_bank_react.git"
+  },
+  "author": "michael yount",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Michael-Yount/my_bad_bank_react/issues"
+  },
+  "homepage": "https://github.com/Michael-Yount/my_bad_bank_react#readme"
 }
