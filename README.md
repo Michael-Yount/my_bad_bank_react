@@ -20,7 +20,7 @@
 
 ## The tech stack for this project:
 
-## I sed a React frontend and I am currently adding an Express server through Node, while useing a Mongo database for my back-end stores.
+## I used a React frontend and I am currently adding an Express server through Node, while useing a Mongo database for my back-end stores.
 
 ## Here is a link to the AWS s3 bucket webdrop.  https://michaelyountbankingapp.s3.us-east-2.amazonaws.com/build/index.html 
 
