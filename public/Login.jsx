@@ -1,7 +1,7 @@
 import React           from 'react';
 import BankForm        from './BankForm';
 import { Card, Container } from 'react-bootstrap';
-import pic from '../badbank.png';
+import pic from '../public/badbank.png';
 
 function Login() {
   

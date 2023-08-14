@@ -4,10 +4,10 @@ import {
   Route
 } from 'react-router-dom';
 import NavBar from "./navBar";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import CreateAccount from "./pages/CreateAccount";
-import Deposit from "./pages/Deposit";
+import Home from "./Home";
+import Login from "./Login";
+import CreateAccount from "./CreateAccount";
+import Deposit from "./Deposit";
 import Withdraw from "./Withdraw";
 import AllData from "./AllData";
 import { createContext } from 'react';
