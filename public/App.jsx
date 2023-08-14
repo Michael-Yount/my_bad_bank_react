@@ -3,13 +3,13 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
-import NavBar from "./components/navBar";
+import NavBar from "./navBar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import CreateAccount from "./pages/CreateAccount";
 import Deposit from "./pages/Deposit";
-import Withdraw from "./pages/Withdraw";
-import AllData from "./pages/AllData";
+import Withdraw from "./Withdraw";
+import AllData from "./AllData";
 import { createContext } from 'react';
 
 export const UserContext = createContext(null)
