@@ -1,7 +1,7 @@
 import React           from 'react';
 import { useContext }  from 'react';
-import BankForm        from './BankForm.jsx';
-import { UserContext } from './App.jsx';
+import BankForm        from './BankForm.js';
+import { UserContext } from './App.js';
 import { Card, Container} from 'react-bootstrap';
 import pic from '../badbank.png'
 

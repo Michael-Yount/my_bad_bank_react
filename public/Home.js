@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { UserContext } from '../public/App';
+import { UserContext } from './App';
 import { Card, Container} from 'react-bootstrap';
 import pic from '../badbank.png'
 

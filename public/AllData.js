@@ -1,6 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
-import { UserContext } from '../public/App';
+import { UserContext } from './App';
 import { Container } from 'react-bootstrap';
 
 function AllData() {

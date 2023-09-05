@@ -32,12 +32,12 @@ function App() {
     <HashRouter>
       <NavBar/>
             <Routes>
-              <Route path="/Home" exact          element={<Home />} />
-              <Route path="/CreateAccount" element={<CreateAccount />} />
-              <Route path="/Deposit"        element={<Deposit />} />
-              <Route path="/Withdraw"       element={<Withdraw />} />
-              <Route path="/AllData"       element={<AllData />} />
-              <Route path="/Login"       element={<Login />} />
+              <Route path="/" exact          component={<Home />} />
+              <Route path="/CreateAccount" component={<CreateAccount />} />
+              <Route path="/Deposit"        component={<Deposit />} />
+              <Route path="/Withdraw"       component={<Withdraw />} />
+              <Route path="/AllData"       component={<AllData />} />
+              <Route path="/Login"       component={<Login />} />
             </Routes>
     </HashRouter>
           </UserContext.Provider>
